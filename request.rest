@@ -1,0 +1,122 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Darum L",
+    "email": "darum@gmail.com",
+    "password": "1122",
+    "confPassword": "1122",
+    "role": "pic"
+}
+
+###
+// get all user
+GET  http://localhost:5000/users
+
+###
+// get user by id dengan tambahkan uuid penggunanya dibelakang
+GET http://localhost:5000/users/d74109fe-0d03-41ef-a64c-8b075f64e2ba
+
+###
+//update user
+PATCH  http://localhost:5000/users/c47c6f3d-f3fc-49c2-ab52-2e90e4a080f3
+Content-Type: application/json
+
+{
+    "name": "Ayu Anjar Fatimah",
+    "email": "ayuanjar@gmail.com",
+    "password": "1234",
+    "confPassword": "1234",
+    "role": "pic"
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/c47c6f3d-f3fc-49c2-ab52-2e90e4a080f3
+
+###
+//Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "nuramaliaap24@gmail.com",
+    "password": "2412"
+}
+
+###
+//Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "ayuanjar@gmail.com",
+    "password": "1234"
+}
+
+
+###
+//Login user
+POST http://192.168.45.240:5000/login
+Content-Type: application/json
+
+{
+    "email": "darum@gmail.com",
+    "password": "1122"
+}
+
+###
+// Me
+GET http://localhost:5000/me
+
+###
+//logout user
+DELETE  http://localhost:5000/logout
+
+
+###
+// get all project list
+GET http://localhost:5000/project
+
+
+###
+// get data project by id
+GET http://localhost:5000/project/e3c13e1d-2233-4e3f-8df6-d51edad6e984
+
+
+###
+//post data project
+POST http://localhost:5000/project
+Content-Type: application/json
+
+{
+    "name_project": "Sistem TKTD",
+    "description": "sistem yang mengelola data tktd di pt fff",
+    "pic": "Nuramalia Putri",
+    "start_date": "2023-07-16",
+    "end_date": "2023-07-26",
+    "priority": "2",
+    "status": "3",
+    "task_complexity": "4"
+}
+
+###
+//post update data project
+PATCH  http://localhost:5000/project/e3c13e1d-2233-4e3f-8df6-d51edad6e984
+Content-Type: application/json
+
+{
+   "name_project": "Sistem ABC",
+    "description": "sistem yang mengelola data abc",
+    "pic": "Nuramalia Putri",
+    "start_date": "2023-07-14",
+    "end_date": "2023-07-25",
+    "priority": "1",
+    "status": "1",
+    "task_complexity": "1"
+}
+
+###
+//hapus data project
+DELETE http://localhost:5000/project/e06a5a3e-0e0d-4e4e-961b-ca69daa1013d
